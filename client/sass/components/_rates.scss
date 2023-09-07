@@ -1,0 +1,33 @@
+.rates {
+  position: relative;
+  text-align: center;
+
+  @supports (animation-timeline: auto) {
+    view-timeline: --rates block;
+    animation-timeline: --rates;
+    animation-name: fade-in;
+    animation-range: entry 20% cover 50%;
+    animation-fill-mode: both;
+  }
+
+  &__list {
+    display: inline-block;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 4rem;
+    letter-spacing: .3rem;
+
+    @include respond-to(phone) {
+      letter-spacing: .1rem;
+    }
+
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-black;
+    padding: 1rem;
+    white-space: nowrap;
+    display: block;
+    text-align: left;
+  }
+}

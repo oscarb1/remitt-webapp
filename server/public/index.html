@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Remitt | Remesas sin fronteras</title>
+</head>
+<body>
+  <header class="header">
+    <div class="row">
+      <div class="header__logo">
+        <img src="img/remitt-logo.png" alt="Remitt Logo" class="header__img">
+        <div class="header__logo-title">
+          Remitt<span class="u-text-secondary">.<span>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="" class="header__link">Iniciar Sesión </a></li>
+          <li class="header__item"><a href="" class="btn btn--secondary">Registrarse</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <div class="section-send-money ">
+      <h1 class="heading-primary u-text-white u-margin-bottom-small">Transfiere dinero con facilidad, sin fronteras.</h1>
+      <div class="send-money ">
+        <div class="calculator">
+          <form class="calculator__form">
+            <div class="calculator__form-content">
+              <div class="calculator__form-group">
+                <label for="from_currency" class="calculator__label">De:</label>
+                <select name="fromCurrency" class="calculator__select from_currency" name="fromCurrency" required>
+                  <option value="ARS" selected>🇦🇷 Pesos Argentinos (ARS)</option>
+                  <option value="VES">🇻🇪 Bolivares Venezolanos (VEF)</option>
+                </select>
+                <input type="number" min="0" value="1.0" step="0.0000001" name="fromAmount" class="calculator__input from_amount" required>
+              </div>
+
+              <div class="calculator__switch-container">
+                <button class="calculator__switch">&nbsp;</button>
+              </div>
+
+              <div class="calculator__form-group">
+                <label for="to_currency" class="calculator__label">A:</label>
+                <select name="toCurrency" class="calculator__select to_currency" name="toCurrency" required>
+                  <option value="VES" selected>🇻🇪 Bolivares Venezolanos (VEF)</option>
+                  <option value="ARS">🇦🇷 Pesos Argentinos (ARS)</option>
+                </select>
+                <input type="number" min="0" step="0.0000001" name="toAmount" class="calculator__input to_amount" required>
+              </div>
+            </div>
+            <div id="rate-details" class="calculator__rate-details">
+              <p>1 ARS = 0.091 VES</p>
+              <p>1 VES = 11.01 ARS</p>
+            </div>
+            <button class="btn btn--secondary calculator__button">Solicitar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="section-daily-rates">
+      <h1 class="heading-primary">Tasa del día</h1>
+      <div class="section-daily-rates-background-shape section-daily-rates-background-shape--1">&nbsp;</div>
+      <div class="section-daily-rates-background-shape section-daily-rates-background-shape--2">&nbsp;</div>
+      <div class="section-daily-rates-background-shape section-daily-rates-background-shape--3">&nbsp;</div>
+      <div class="rates">
+        <ul class="rates__list">
+          <li class="rates__item">
+            <span class="rates__icon">🇨🇱</span>&nbsp;&nbsp;&nbsp;CLP&nbsp;&nbsp;0,0359 BS
+          </li>
+          <li class="rates__item">
+            <span class="rates__icon">🇦🇷</span>&nbsp;&nbsp;&nbsp;ARS&nbsp;&nbsp;0,0434 BS
+          </li>
+          <li class="rates__item">
+            <span class="rates__icon">🇵🇦</span>&nbsp;&nbsp;&nbsp;USD&nbsp;&nbsp;31,88 BS
+          </li>
+          <li class="rates__item">
+            <span class="rates__icon">🇪🇸</span>&nbsp;&nbsp;&nbsp;EUR&nbsp;&nbsp;33,92 BS
+          </li>
+          <li class="rates__item">
+            <span class="rates__icon">🇵🇪</span>&nbsp;&nbsp;&nbsp;PEN&nbsp;&nbsp;8,42 BS
+          </li>
+          <li class="rates__item">
+            <span class="rates__icon">🇨🇴</span>&nbsp;&nbsp;&nbsp;COP&nbsp;&nbsp;127 BS
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <ul class="footer__social-media">
+      <li class="footer__items"><i class="fa-brands fa-instagram"></i></li>
+      <li class="footer__items"><i class="fa-brands fa-whatsapp"></i></li>
+    </ul>
+  
+    <div class="footer__logo-container">
+      <img src="img/remitt-logo.png" alt="Remitt Logo" class="footer__logo">
+    </div>
+  
+    <p class="footer__copyright">
+      Copyright &copy; 2023 Remitt. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>

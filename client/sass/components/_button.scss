@@ -1,0 +1,27 @@
+.btn {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  transition: all .2s;
+  display: inline-block;
+  font-weight: 700;
+  outline: none;
+
+  &:hover {
+    transform: translateY(-.25rem) scale(1.05);
+    box-shadow: 0 .75rem 1.25rem rgba($color-black, .3);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+  
+  &--secondary {
+    color: $color-white;
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+  }
+
+}

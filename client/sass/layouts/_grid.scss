@@ -1,0 +1,32 @@
+.row {
+  max-width: $grid-width;
+  display: block;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-vertical-gap;
+  }
+  
+  @include respond-to(tab-land) {
+    width: 80%;
+  }
+
+  @include respond-to(phone) {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-horizontal-gap;
+    }
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$grid-horizontal-gap}) / 3);
+  }
+}

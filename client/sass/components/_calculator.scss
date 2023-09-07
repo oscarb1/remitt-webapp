@@ -1,0 +1,138 @@
+.calculator {
+  &__form-content {
+    display: table;
+    width: 100%;
+  }
+
+  &__form-group {
+    display: table-cell;
+    align-content: center;
+    vertical-align: top;
+  }
+
+  &__label {
+    font-weight: 900;
+    font-size: 2rem;
+  }
+
+  &__select {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 2px solid $color-gray-light;
+    border-radius: 3px;
+    background: transparent;
+    padding: 2rem;
+    margin-top: .75rem;
+    transition: all .2s;
+    font-size: 2rem;
+    font-weight: 100;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+
+  &__switch {
+    background: transparent;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 2px solid $color-gray-light;
+    position: relative;
+    font-size: 3.5rem;
+    transition: all .2s;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: $color-primary;
+
+    &::after {
+      content: '←';
+      position: absolute;
+      top: .25rem;
+      left: .6rem;
+      transition: all .2s;
+    }
+
+    &::before {
+      content: '→';
+      position: absolute;
+      top: -.75rem;
+      left: .6rem;
+      transition: all .2s;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+
+      &::after {
+        transform: translateY(.15rem);
+      }
+
+      &::before {
+        transform: translateY(-.15rem);
+      }
+    }
+
+    &-container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    outline: none;
+    border: 2px solid $color-gray-light;
+    border-radius: 3px;
+    background: transparent;
+    padding: 2rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    transition: all .2s;
+    margin-top: 6rem;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+
+    &:valid {
+      border-color: $color-primary;
+    }
+
+    &:invalid {
+      border: 2px solid red;
+    }
+  }
+
+  &__rate-details {
+    margin: 3rem 0 2rem;
+  }
+
+  &__button {
+    float: right;
+    padding: 1.5rem 5rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  @include respond-to(tab-port) {
+    &__form-group {
+      display: block;
+    }
+
+    &__form-content {
+      display: block;
+    }
+
+    &__switch {
+      transform: rotate(90deg);
+
+      &-container {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "remitt-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:lint": "sass-lint -c ./.sass-lint.yml '**/*.scss' -v -q",
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass -w sass/main.scss css/style.css",
+    "devServer": "live-server",
+    "dev": "npm-run-all --parallel sass:watch devServer",
+    "sass:compile": "sass sass/main.scss css/style.comp.css",
+    "css:prefix": "postcss --use autoprefixer -b 'last 10 version' css/style.comp.css -o css/style.prefix.css && rm css/style.comp.css",
+    "css:compress": "sass --style=compressed css/style.prefix.css css/style.css && rm css/style.prefix.css",
+    "css:build": "npm-run-all sass:compile css:prefix css:compress",
+    "js:build": "esbuild js/app.mjs --bundle --minify --sourcemap",
+    "build": "BUILD_PATH=../server/public sh bin/build-script.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "10.4.15",
+    "eslint": "8.48.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "live-server": "1.2.2",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "10.1.0",
+    "sass": "^1.66.1",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0"
+  },
+  "dependencies": {
+    "esbuild": "0.19.2"
+  }
+}

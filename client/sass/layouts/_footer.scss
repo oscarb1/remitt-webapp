@@ -1,0 +1,46 @@
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  padding: 2rem; 
+  justify-content: space-evenly;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  &__social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  }
+
+  &__items {
+    font-size: 3rem;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__logo {
+    width: 7rem;
+    height: 8rem;
+
+    @include respond-to(phone) {
+      width: 5rem;
+      height: 6rem;
+    }
+
+    &-container {
+      width: 30%;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    width: 30%;
+  }
+}
