@@ -1,7 +1,7 @@
 import express from 'express';
 import path, { dirname } from 'node:path';
 import { fileURLToPath } from 'url';
-import apiRouter from './routes/api.js';
+import apiRouter from './api/index.js';
 import { HTTPError } from './lib/errors.js';
 
 const currentDirName = dirname(fileURLToPath(import.meta.url));
